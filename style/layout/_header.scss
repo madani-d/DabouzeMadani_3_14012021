@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    img {
+        width: 51%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        font-size: 1.4rem;
+        position: absolute;
+        top: calc(50% - (1.4rem / 2));
+        left: 5%;
+    }
+}
