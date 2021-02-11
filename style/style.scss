@@ -3,6 +3,7 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
+@import "./composants/boutons";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/index";
@@ -15,16 +16,3 @@
 
 
 
-
-img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-}
-
-.essai {
-    font-size: 3rem;
-    background: linear-gradient(to top, $color-secondary, $color-primary );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}

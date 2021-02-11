@@ -9,6 +9,7 @@
     background-color: darken($color-grey, 4);
     padding: .8rem 0 .8rem 0;
     box-shadow: inset 0 3px 3px darken($color-grey, 20);
+
     p {
         margin-left: 15px;
         font-weight: bold;
@@ -18,41 +19,35 @@
 .main__header__explore {
     // height: 35vh;
     text-align: center;
+
     h1 {
         font-size: 1.5rem;
         margin: 1.4rem 3rem 0 3rem;
     }
+
     p {
         margin: 1rem;
         font-size: 1.2rem;
         color: darken($color-grey, 55);
     }
-    button {
-        color: #fff;
-        background: linear-gradient(to right bottom,$color-secondary, $color-primary);
-        font-size: 1.2rem;
-        border: none;
-        padding: 1rem;
-        border-radius: 50px;
-        box-shadow: 3px 3px 5px darken($color-grey, 20), -5px 3px 5px darken($color-grey, 20);
-        margin: 1rem 0 3.5rem 0;
-    }
+
 }
 
 .main__operation {
-    
+
     margin: 2rem 0;
+
     h2 {
         margin: 0 0 1rem 1.3rem;
         font-size: 1.6rem;
         font-weight: bold;
     }
 
-     ol {
+    ol {
         counter-reset: section;
         list-style-type: none;
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
     }
 
     &__item {
@@ -66,18 +61,20 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content:flex-start;
+        justify-content: flex-start;
         box-shadow: 3px 3px 10px darken($color-grey, 20), -5px 3px 10px darken($color-grey, 20);
         cursor: pointer;
+
         p {
-            margin-left: 30px; 
+            margin-left: 30px;
             font-size: 1.1rem;
             font-weight: bold;
         }
+
         .fas {
-                margin-left: 30px;
-                color: darken($color-grey, 40);
-                font-size: 1.2rem;
+            margin-left: 30px;
+            color: darken($color-grey, 40);
+            font-size: 1.2rem;
         }
     }
 
@@ -97,13 +94,14 @@
         justify-content: center;
         align-items: center;
     }
-   
-   
+
+
 }
 
 .restaurants {
     width: 100%;
-    background-color:$color-grey;
+    background-color: $color-grey;
+
     h2 {
         font-size: 1.6rem;
         font-weight: bold;
@@ -113,16 +111,77 @@
 
 .restaurant {
     width: 90%;
-    height: 250px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin: 0 auto 1rem;
     border-radius: 20px;
-    a {
-        display: block;
-        height: 100%;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px darken($color-grey, 20), -5px 3px 10px darken($color-grey, 20);
+    position: relative;
+    figure {
+        height: 250px;
+
+        img {
+            overflow: hidden;
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .vertical {
+            object-position: 0 62%;
+        }
+
+        figcaption {
+            height: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fa-heart {
+            margin-right: 25px;
+            font-size: 1.7rem;
+            position: relative;
+            .fas {
+                scale: 0;
+                position: absolute;
+                background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
+                background: linear-gradient(to top, #ff79da, #9356dc);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+            }
+        }
     }
-    img {
-        height: 70%;
-        object-fit: cover;
+
+    &__legende {
+        margin-left: 15px;
+        line-height: 1.5rem;
+        h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: lighter;
+        }
+
+    }
+
+    &__new::before {
+        content: "Nouveau";
+        position: absolute;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 40);
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding: 0.6rem;
+        top: 15px;
+        right: 15px;
+        border-radius: 2px;
     }
 }

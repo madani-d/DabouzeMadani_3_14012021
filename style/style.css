@@ -59,9 +59,27 @@ a {
   src: url("../polices/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("../polices/Shrikhand-Regular.otf");
+}
+
 body {
   font-size: 16px;
   font-family: 'Roboto';
+}
+
+button {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  font-size: 1.2rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 5px #c3c3c3, -5px 3px 5px #c3c3c3;
+          box-shadow: 3px 3px 5px #c3c3c3, -5px 3px 5px #c3c3c3;
+  margin: 1rem auto 3.5rem auto;
 }
 
 .header {
@@ -81,6 +99,28 @@ body {
   position: absolute;
   top: calc(50% - (1.4rem / 2));
   left: 5%;
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  line-height: 1.6rem;
+  padding: 25px;
+}
+
+footer h2 {
+  font-family: 'Shrikhand';
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+footer .fa-hands-helping {
+  font-size: 0.7rem;
+}
+
+footer .fas {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .index__main__header {
@@ -121,19 +161,6 @@ body {
   margin: 1rem;
   font-size: 1.2rem;
   color: #6a6a6a;
-}
-
-.main__header__explore button {
-  color: #fff;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to right bottom, #ff79da, #9356dc);
-  font-size: 1.2rem;
-  border: none;
-  padding: 1rem;
-  border-radius: 50px;
-  -webkit-box-shadow: 3px 3px 5px #c3c3c3, -5px 3px 5px #c3c3c3;
-          box-shadow: 3px 3px 5px #c3c3c3, -5px 3px 5px #c3c3c3;
-  margin: 1rem 0 3.5rem 0;
 }
 
 .main__operation {
@@ -232,29 +259,215 @@ body {
 }
 
 .restaurant {
-  display: block;
   width: 90%;
-  height: 250px;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 0 auto 1rem;
   border-radius: 20px;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 10px #c3c3c3, -5px 3px 10px #c3c3c3;
+          box-shadow: 3px 3px 10px #c3c3c3, -5px 3px 10px #c3c3c3;
+  position: relative;
 }
 
+.restaurant figure {
+  height: 250px;
+}
 
-.restaurant img {
-  width: 100%;
+.restaurant figure img {
+  overflow: hidden;
   height: 70%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
+.restaurant figure .vertical {
+  -o-object-position: 0 62%;
+     object-position: 0 62%;
+}
 
+.restaurant figure figcaption {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-.essai {
-  font-size: 3rem;
+.restaurant figure .fa-heart {
+  margin-right: 25px;
+  font-size: 1.7rem;
+  position: relative;
+}
+
+.restaurant figure .fa-heart .fas {
+  scale: 0;
+  position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
   background: linear-gradient(to top, #ff79da, #9356dc);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.restaurant__legende {
+  margin-left: 15px;
+  line-height: 1.5rem;
+}
+
+.restaurant__legende h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.restaurant__legende p {
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+.restaurant__new::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99e2d0;
+  color: #278870;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.6rem;
+  top: 15px;
+  right: 15px;
+  border-radius: 2px;
+}
+
+.main-menu {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-menu button {
+  padding: 1rem 4rem;
+}
+
+.menu__header {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu__header__picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu__header__legende {
+  position: absolute;
+  bottom: 0;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: last baseline;
+      -ms-flex-align: last baseline;
+          align-items: last baseline;
+  font-family: 'Shrikhand';
+  border-radius: 30px 30px 0 0;
+}
+
+.menu__header__legende h1 {
+  margin-left: 20px;
+  font-size: 1.7rem;
+}
+
+.menu__header__legende .fa-heart {
+  margin-right: 37px;
+  font-size: 1.7rem;
+}
+
+.menu-list {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.menu-list .entrees {
+  margin-top: 40px;
+}
+
+.menu-list h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.menu-list h2::after {
+  content: "";
+  display: block;
+  background-color: #99e2d0;
+  height: 3px;
+  width: 50px;
+  position: absolute;
+  bottom: -7px;
+}
+
+.menu-list__text {
+  width: 85%;
+}
+
+.menu-list li {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  line-height: 1.7rem;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 15px;
+}
+
+.menu-list li h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu-list li p {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-list li .checker {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
