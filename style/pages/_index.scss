@@ -141,20 +141,7 @@
             align-items: center;
         }
 
-        .fa-heart {
-            margin-right: 25px;
-            font-size: 1.7rem;
-            position: relative;
-            .fas {
-                scale: 0;
-                position: absolute;
-                background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
-                background: linear-gradient(to top, #ff79da, #9356dc);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                
-            }
-        }
+        
     }
 
     &__legende {
@@ -185,3 +172,4 @@
         border-radius: 2px;
     }
 }
+
