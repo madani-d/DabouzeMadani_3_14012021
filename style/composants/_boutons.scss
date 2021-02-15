@@ -7,5 +7,7 @@ button {
     border-radius: 50px;
     box-shadow: 3px 3px 5px darken($color-grey, 20), -5px 3px 5px darken($color-grey, 20);
     margin: 1rem auto 3.5rem auto;
-
+    cursor: pointer;
+    @include anim-btn;
 }
+

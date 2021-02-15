@@ -2,17 +2,18 @@
 
 .fa-heart {
     margin-right: 25px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     position: relative;
      &:hover .fas  {
         transform: scale(1.1) translate(-50%, -50%);
-        transition: transform 0.4s cubic-bezier(.9,.01,.09,2.24);
+        transition: transform 0.5s cubic-bezier(.9,.01,.09,2.24);
 
     }
 
     .fas {
         position: absolute;
         background: linear-gradient(to top, #ff79da, #9356dc);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         top: 50%;
@@ -24,3 +25,26 @@
 
    
 }
+
+// animation boutons
+
+@mixin anim-btn {
+    &:hover {
+        background: linear-gradient(to right bottom, lighten($color-secondary, 5), lighten($color-primary, 5));
+        box-shadow: 3px 3px 5px darken($color-grey, 35), -5px 3px 5px darken($color-grey, 35);
+        
+    }
+}
+
+@mixin anim-item {
+    &:hover {
+        background: lighten($color-primary, 37);
+
+        .fas {
+            color: $color-primary;
+        }
+    }
+}
+
+
+
