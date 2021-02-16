@@ -48,3 +48,24 @@
 
 
 
+.dish {
+    animation: move-plate 3s backwards;
+
+    @for $i from 1 to 11 {
+        &-#{$i} {
+            animation-delay: 0.2s * $i;
+        }
+        
+    }
+}
+
+@keyframes move-plate {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -103,6 +103,87 @@ body {
   transition: transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
 }
 
+.dish {
+  -webkit-animation: move-plate 3s backwards;
+          animation: move-plate 3s backwards;
+}
+
+.dish-1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.dish-2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.dish-3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.dish-4 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.dish-5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.dish-6 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.dish-7 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.dish-8 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.dish-9 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.dish-10 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes move-plate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-plate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 button {
   color: #fff;
   background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
@@ -125,7 +206,7 @@ button:hover {
 }
 
 .loader {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   background: #fff;
@@ -713,8 +794,6 @@ footer .fas {
 
 .menu-list li .checker {
   width: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
   background: #99e2d0;
   color: #fff;
   -ms-flex-negative: 0;
@@ -750,8 +829,6 @@ li:hover .checker {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   width: 60px;
 }
 

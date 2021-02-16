@@ -115,7 +115,7 @@
 
         .checker {
             width: 0;
-            transform: translateX(100%);
+            // transform: translateX(100%);
             background: $color-tertiary;
             color: #fff;
             flex-shrink: 0;
@@ -141,7 +141,7 @@
 
 li:hover .checker{
     justify-content: center;
-    transform: translateX(0);
+    // transform: translateX(0);
     width: 60px;
 
     .fas {
