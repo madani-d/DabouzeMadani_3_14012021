@@ -124,6 +124,192 @@ button:hover {
           box-shadow: 3px 3px 5px #9d9d9d, -5px 3px 5px #9d9d9d;
 }
 
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 1;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: displayLoader 0.4s 3s forwards;
+          animation: displayLoader 0.4s 3s forwards;
+}
+
+.loader__box {
+  font-family: 'Shrikhand';
+  font-size: 50px;
+  color: #fff;
+  width: 310px;
+  height: 110px;
+  margin: 250px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.loader__box::after {
+  content: '';
+  position: absolute;
+  width: 455px;
+  height: 165px;
+  border-radius: 50%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right bottom, from(#9356dc), color-stop(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #9356dc, #ff79da, #9356dc);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: filltext 0.6s 1.6s ease-in-out both;
+          animation: filltext 0.6s 1.6s ease-in-out both;
+}
+
+.loader__top {
+  height: 5px;
+  width: 310px;
+  position: absolute;
+  top: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to right, #9356dc, #ff79da);
+  border-radius: 5px 5px 0 0;
+  -webkit-animation: growx 0.6s  linear both;
+          animation: growx 0.6s  linear both;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.loader__right {
+  height: 100px;
+  width: 5px;
+  position: absolute;
+  right: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  -webkit-animation: growy 0.2s 0.6s linear both;
+          animation: growy 0.2s 0.6s linear both;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.loader__bottom {
+  height: 5px;
+  width: 310px;
+  position: absolute;
+  bottom: 0px;
+  background: -webkit-gradient(linear, right top, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to left, #9356dc, #ff79da);
+  border-radius: 0 0 5px 5px;
+  -webkit-animation: growx 0.6s 0.8s linear both;
+          animation: growx 0.6s 0.8s linear both;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.loader__left {
+  height: 100px;
+  width: 5px;
+  position: absolute;
+  left: 0px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  -webkit-animation: growy 0.2s 1.4s linear both;
+          animation: growy 0.2s 1.4s linear both;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes growx {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes growx {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes growy {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes growy {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes filltext {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes filltext {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes displayLoader {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes displayLoader {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
 .header {
   width: 100%;
   text-align: center;

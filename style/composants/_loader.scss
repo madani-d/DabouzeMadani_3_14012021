@@ -1,0 +1,118 @@
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 1;
+    transform-origin: top;
+    animation: displayLoader 0.4s 3s forwards;
+    
+    &__box {
+        font-family: 'Shrikhand';
+        font-size: 50px;
+        color: #fff;
+        width: 310px;
+        height: 110px;
+        // border: 1px solid black;
+        margin: 250px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    &__box::after {
+        content: '';
+        position: absolute;
+        width: 455px;
+        height: 165px;
+        border-radius: 50%;
+        z-index: -1;
+        background: linear-gradient(to bottom right, $color-primary, $color-secondary, $color-primary);
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        animation: filltext 0.6s 1.6s ease-in-out both;
+    }
+
+    &__top {
+        height: 5px;
+        width: 310px;
+        position: absolute;
+        top: 0px;
+        background: linear-gradient(to right, $color-primary, $color-secondary);
+        border-radius: 5px 5px 0 0;
+        animation: growx 0.6s  linear both;
+        transform-origin: left;
+    }
+
+    &__right {
+        height: 100px;
+        width: 5px;
+        position: absolute;
+        right: 0px;
+        background: linear-gradient(to bottom, $color-secondary, $color-primary);
+        animation: growy 0.2s 0.6s linear both;
+        transform-origin: top;
+    }
+    
+    &__bottom {
+        height: 5px;
+        width: 310px;
+        position: absolute;
+        bottom: 0px;
+        background: linear-gradient(to left, $color-primary, $color-secondary);
+        border-radius: 0 0 5px 5px;
+        animation: growx 0.6s 0.8s linear both;
+        transform-origin: right;
+
+    }
+    
+    &__left {
+        height: 100px;
+        width: 5px;
+        position: absolute;
+        left: 0px;
+        background: linear-gradient(to top, $color-secondary, $color-primary);
+        animation: growy 0.2s 1.4s linear both;
+        transform-origin: bottom;
+    }
+
+    
+    
+}
+
+@keyframes growx {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes growy {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes filltext {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes displayLoader {
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
