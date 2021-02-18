@@ -47,6 +47,7 @@
 
 .menu-list {
     width: 90%;
+    max-width: 500px;
     margin: 20px auto;
 
     .entrees {
@@ -101,13 +102,14 @@
         h3 {
             font-size: 1.1rem;
             font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         p {
             font-size: 1rem;
+        }
+
+        p,
+        h3 {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -119,16 +121,14 @@
             background: $color-tertiary;
             color: #fff;
             flex-shrink: 0;
-            display: flex;
-            justify-content:center;
-            align-items: center;
+            @include center-element;
             font-size: 1.5rem;
             transition: all 1s ease;
 
-             .fas {
-                 transition: all 1s ease-in-out;
-                 margin-left: 18px;
-             }
+            .fas {
+                transition: all 1s ease-in-out;
+                margin-left: 18px;
+            }
         }
     }
 
@@ -139,7 +139,7 @@
     }
 }
 
-li:hover .checker{
+li:hover .checker {
     justify-content: center;
     // transform: translateX(0);
     width: 60px;

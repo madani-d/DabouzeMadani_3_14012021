@@ -47,9 +47,10 @@
 }
 
 
+//animation apparition des plats
 
 .dish {
-    animation: move-plate 3s backwards;
+    animation: move-plate 2s backwards;
 
     @for $i from 1 to 11 {
         &-#{$i} {

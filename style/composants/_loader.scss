@@ -1,5 +1,5 @@
 .loader {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background: #fff;
@@ -13,11 +13,8 @@
         color: #fff;
         width: 310px;
         height: 110px;
-        // border: 1px solid black;
         margin: 250px auto 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-element;
         position: relative;
         overflow: hidden;
         border-radius: 5px;

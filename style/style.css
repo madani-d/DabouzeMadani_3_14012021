@@ -104,8 +104,8 @@ body {
 }
 
 .dish {
-  -webkit-animation: move-plate 3s backwards;
-          animation: move-plate 3s backwards;
+  -webkit-animation: move-plate 2s backwards;
+          animation: move-plate 2s backwards;
 }
 
 .dish-1 {
@@ -206,7 +206,7 @@ button:hover {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: #fff;
@@ -492,17 +492,19 @@ footer .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main__operation__item {
   height: 70px;
   width: 90%;
+  max-width: 340px;
   background: #f6f6f6;
-  margin: 11px auto;
+  margin: 11px 15px;
   border-radius: 25px;
   text-align: center;
   position: relative;
@@ -573,6 +575,17 @@ footer .fas {
   background-color: #f6f6f6;
 }
 
+.restaurants__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .restaurants h2 {
   font-size: 1.6rem;
   font-weight: bold;
@@ -581,7 +594,8 @@ footer .fas {
 
 .restaurant {
   width: 90%;
-  margin: 0 auto 1rem;
+  max-width: 340px;
+  margin: 0 1rem 1rem;
   border-radius: 20px;
   display: block;
   height: 100%;
@@ -590,6 +604,12 @@ footer .fas {
   -webkit-box-shadow: 3px 3px 10px #c3c3c3, -5px 3px 10px #c3c3c3;
           box-shadow: 3px 3px 10px #c3c3c3, -5px 3px 10px #c3c3c3;
   position: relative;
+}
+
+@media screen and (min-width: 744px) {
+  .restaurant {
+    margin-bottom: 2rem;
+  }
 }
 
 .restaurant figure {
@@ -715,6 +735,7 @@ footer .fas {
 
 .menu-list {
   width: 90%;
+  max-width: 500px;
   margin: 20px auto;
 }
 
@@ -780,13 +801,14 @@ footer .fas {
 .menu-list li h3 {
   font-size: 1.1rem;
   font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menu-list li p {
   font-size: 1rem;
+}
+
+.menu-list li p,
+.menu-list li h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
