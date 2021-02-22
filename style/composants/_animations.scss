@@ -2,10 +2,10 @@
 
 .fa-heart {
     margin-right: 25px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     position: relative;
      &:hover .fas  {
-        transform: scale(1.1) translate(-50%, -50%);
+        transform: scale(1.2) translate(-50%, -50%);
         transition: transform 0.5s cubic-bezier(.9,.01,.09,2.24);
 
     }
